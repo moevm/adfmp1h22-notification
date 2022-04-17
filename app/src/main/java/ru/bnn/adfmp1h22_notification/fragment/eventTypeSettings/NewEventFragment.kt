@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.DialogFragment
 import ru.bnn.adfmp1h22_notification.R
 
@@ -17,12 +18,17 @@ class NewEventFragment : DialogFragment() {
         savedInstanceState: Bundle?
     ): View {
         val rootView: View = inflater.inflate(R.layout.fragment_new_event, container, false)
+        rootView.findViewById<Button>(R.id.button2).setOnClickListener { this.dismiss() }
+        rootView.findViewById<Button>(R.id.button).setOnClickListener { this.dismiss() }
         return rootView
     }
 
     @SuppressLint("DialogFragmentCallbacksDetector")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
+        dialog.setOnDismissListener() {
+            this.dismiss()
+        }
         return dialog
     }
 }
