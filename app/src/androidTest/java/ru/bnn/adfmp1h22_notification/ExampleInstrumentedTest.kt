@@ -1,4 +1,4 @@
-package ru.bnn.adfmp1h22notification
+package ru.bnn.adfmp1h22_notification
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

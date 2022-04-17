@@ -1,4 +1,4 @@
-package ru.bnn.adfmp1h22notification
+package ru.bnn.adfmp1h22_notification
 
 import org.junit.Test
 

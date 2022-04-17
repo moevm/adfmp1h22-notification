@@ -9,4 +9,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="take">Что нужно взять</string>
+    <string name="events">Ваши события</string>
+    <string name="notify">Уведомления</string>
+    <string name="setting_types">Настройка типов событий</string>
 </resources>

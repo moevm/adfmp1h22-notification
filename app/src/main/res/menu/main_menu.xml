@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.bnn.adfmp1h22notification">
+    <item
+        android:id="@+id/take"
+        android:title="@string/take" />
+    <item
+        android:id="@+id/events"
+        android:title="@string/events" />
+    <item
+        android:id="@+id/notify"
+        android:title="@string/notify" />
+    <item
+        android:id="@+id/setting_types"
+        android:title="@string/setting_types" />
+</menu>
