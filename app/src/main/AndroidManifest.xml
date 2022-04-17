@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adfmp1h22notification">
         <activity
+            android:name=".activity.NotifyActivity"
+            android:exported="false"
+            android:label="@string/title_activity_notify"
+            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar" />
+        <activity
             android:name=".activity.EventsActivity"
             android:exported="false"
             android:label="@string/title_activity_events"
