@@ -1,34 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.bnn.adfmp1h22_notification.activity.EventTypeSettingsActivity">
+    android:background="#9951AFDA"
+    tools:context=".activity.EventTypeSettingsActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.Adfmp1h22notification.AppBarOverlay">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.Adfmp1h22notification.PopupOverlay" />
+            android:layout_height="wrap_content">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6D6D6"
+                android:orientation="horizontal">
 
-    <include layout="@layout/content_event_type_settings" />
+                <LinearLayout
+                    android:id="@+id/llFields"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="showEditEvent"
+                    android:orientation="vertical">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+                    <LinearLayout
+                        android:id="@+id/TextLine12"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:clickable="true"
+                        android:onClick="showEditEvent">
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+                        <TextView
+                            android:id="@+id/tv22"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center|left"
+                            android:onClick="showEditEvent"
+                            android:text="Отпуск"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <LinearLayout
+                        android:id="@+id/TextLine1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65dp">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center|left"
+                            android:onClick="showEditEvent"
+                            android:text="Развлечения"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider11"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/delBtn1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65dp"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="0dp"
+                        android:contentDescription="TODO"
+                        android:onClick="deleteEventOnClick"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/divider8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <ImageButton
+                        android:id="@+id/delBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65dp"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="0dp"
+                        android:contentDescription="TODO"
+                        android:onClick="deleteEventOnClick"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/divider14"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="showNewEvent"
+                android:text="Добавьте новый тип" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
