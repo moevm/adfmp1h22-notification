@@ -16,4 +16,5 @@
     <string name="setting_types">Настройка типов событий</string>
     <string name="title_activity_events">EventsActivity</string>
     <string name="title_activity_notify">NotifyActivity</string>
+    <string name="title_activity_event_type_settings">EventTypeSettingsActivity</string>
 </resources>
