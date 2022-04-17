@@ -1,41 +1,43 @@
 package ru.bnn.adfmp1h22_notification.activity
 
-import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import ru.bnn.adfmp1h22_notification.R
-import ru.bnn.adfmp1h22_notification.activity.databinding.ActivityNotifyBinding
 
 class NotifyActivity : AppCompatActivity() {
-
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityNotifyBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = "Уведомления"
+        setContentView(R.layout.activity_notify)
+    }
 
-        binding = ActivityNotifyBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
 
-        setSupportActionBar(binding.toolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment_content_notify)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.take -> {
+                this.finish()
+            }
+            R.id.events -> {
+                val intent = Intent(this, EventsActivity::class.java)
+                this.finish()
+                this.startActivity(intent)
+            }
+            R.id.notify -> {
+            }
+            R.id.setting_types -> {
+                val intent = Intent(this, EventTypeSettingsActivity::class.java)
+                this.finish()
+                this.startActivity(intent)
+            }
         }
+        return true
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_notify)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
 }

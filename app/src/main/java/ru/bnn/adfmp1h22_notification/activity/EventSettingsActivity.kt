@@ -13,6 +13,7 @@ class EventSettingsActivity : AppCompatActivity() {
     }
 
     fun goHome(view: View) {
+        this.finish()
     }
 
 }

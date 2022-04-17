@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import ru.bnn.adfmp1h22_notification.activity.EventTypeSettingsActivity
+import ru.bnn.adfmp1h22_notification.activity.EventsActivity
+import ru.bnn.adfmp1h22_notification.activity.NotifyActivity
+
 //import ru.bnn.adfmp1h22notification.R
 
 class MainActivity : AppCompatActivity() {
@@ -24,13 +28,16 @@ class MainActivity : AppCompatActivity() {
             R.id.take -> {
             }
             R.id.events -> {
-
+                val intent = Intent(this, EventsActivity::class.java)
+                this.startActivity(intent)
             }
             R.id.notify -> {
-
+                val intent = Intent(this, NotifyActivity::class.java)
+                this.startActivity(intent)
             }
             R.id.setting_types -> {
-
+                val intent = Intent(this, EventTypeSettingsActivity::class.java)
+                this.startActivity(intent)
             }
         }
         return true
