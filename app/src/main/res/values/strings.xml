@@ -14,4 +14,5 @@
     <string name="events">Ваши события</string>
     <string name="notify">Уведомления</string>
     <string name="setting_types">Настройка типов событий</string>
+    <string name="title_activity_events">EventsActivity</string>
 </resources>

@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adfmp1h22notification">
         <activity
-            android:name="ru.bnn.adfmp1h22_notification.MainActivity"
+            android:name=".activity.EventsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_events"
+            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Adfmp1h22notification.NoActionBar">
