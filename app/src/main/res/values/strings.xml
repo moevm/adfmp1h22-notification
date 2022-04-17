@@ -17,4 +17,6 @@
     <string name="title_activity_events">EventsActivity</string>
     <string name="title_activity_notify">NotifyActivity</string>
     <string name="title_activity_event_type_settings">EventTypeSettingsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
