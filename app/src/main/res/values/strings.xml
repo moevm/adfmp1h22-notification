@@ -4,8 +4,10 @@
     <string name="events">Ваши события</string>
     <string name="notify">Уведомления</string>
     <string name="setting_types">Настройка типов событий</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import ru.bnn.adfmp1h22_notification.MainActivity
 import ru.bnn.adfmp1h22_notification.R
 import ru.bnn.adfmp1h22_notification.fragment.eventTypeSettings.EditEventFragment
 import ru.bnn.adfmp1h22_notification.fragment.eventTypeSettings.NewEventFragment

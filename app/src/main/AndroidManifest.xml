@@ -10,33 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adfmp1h22notification">
         <activity
-            android:name=".activity.MainActivity2"
+            android:name=".activity.EventTypeSettingsActivity"
             android:exported="false" />
         <activity
             android:name=".activity.EventSettingsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_event_settings"
-            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar" />
-        <activity
-            android:name=".activity.EventTypeSettingsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_event_type_settings"
-            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar" />
-        <activity
-            android:name=".activity.NotifyActivity"
-            android:exported="false"
-            android:label="@string/title_activity_notify"
-            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".activity.EventsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_events"
-            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar" />
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.Adfmp1h22notification.NoActionBar">
+            android:name=".activity.NotifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
