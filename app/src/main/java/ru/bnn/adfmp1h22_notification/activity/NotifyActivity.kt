@@ -5,13 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import ru.bnn.adfmp1h22_notification.R
+import ru.bnn.adfmp1h22_notification.fragment.notifyActivity.GoogleAuthFragment
+import ru.bnn.adfmp1h22_notification.fragment.notifyActivity.NotifyTriggers
 
 class NotifyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.title = "Уведомления"
         setContentView(R.layout.activity_notify)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNotifyFrag, NotifyTriggers.newInstance()).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -40,4 +45,13 @@ class NotifyActivity : AppCompatActivity() {
         return true
     }
 
+    fun changeFragAuthed(view : View) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNotifyFrag, GoogleAuthFragment.newInstance()).commit()
+    }
+
+    fun changeFragUnAuthed(view : View) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.bottomNotifyFrag, NotifyTriggers.newInstance()).commit()
+    }
 }
